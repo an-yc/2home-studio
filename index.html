@@ -716,7 +716,7 @@
     }
 
     .map-link:hover iframe {
-      filter: grayscale(60%) contrast(1.1) opacity(0.9);
+      opacity: 0.9;
     }
 
     .map-label {
@@ -875,6 +875,89 @@
       stroke: currentColor;
       stroke-width: 1.5;
       fill: none;
+    }
+
+    /* ========== GOOGLE REVIEW ========== */
+    .google-review {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.6rem 1rem;
+      border: 1px solid rgba(42, 38, 34, 0.12);
+      border-radius: 4px;
+      text-decoration: none;
+      color: var(--ink);
+      transition: border-color 0.3s ease;
+      margin: 0.75rem auto 0;
+    }
+
+    .map-embed {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .map-embed .map-link {
+      width: 100%;
+    }
+
+    .google-review:hover {
+      border-color: var(--terracotta-light);
+    }
+
+    .google-review-g {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--ink-faded);
+      letter-spacing: 0.02em;
+    }
+
+    .google-review-rating {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .google-review-stars {
+      color: var(--terracotta);
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+    }
+
+    .google-review-count {
+      font-size: 0.85rem;
+      color: var(--ink-faded);
+    }
+
+    /* ========== OPPORTUNITIES ========== */
+    .opportunities-section {
+      margin-top: 2.5rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid rgba(42, 38, 34, 0.1);
+    }
+
+    .opportunities-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .opportunities-list p {
+      font-size: 0.95rem;
+      color: var(--ink-light);
+      line-height: 1.8;
+    }
+
+    .opportunities-list a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink-faded);
+    }
+
+    .opportunities-list a:hover {
+      border-color: var(--terracotta);
+      color: var(--terracotta);
     }
 
     /* ========== FOOTER ========== */
@@ -1036,9 +1119,18 @@
             <p class="team-label">studio manager & co-founder</p>
             <h2 class="team-name">Cherry</h2>
             <p class="team-bio">
-              Keeping 2home running like a home — making sure there's a bowl of soup or a quiet corner to settle into, while Terry works his craft. A trilingual speech therapist and nurse by training.
+              Keeping 2home running like a home — making sure there's a quiet corner to settle into, while Terry works his craft. A trilingual speech therapist and mental health nurse by training.
             </p>
           </div>
+        </div>
+      </div>
+
+      <!-- Opportunities -->
+      <div class="opportunities-section reveal">
+        <p class="section-marker">opportunities</p>
+        <div class="opportunities-list">
+          <p>We are hiring stylists.</p>
+          <p>Open for studio rental for workshops, book club meetings or any events. <a href="https://wa.me/61402378879">WhatsApp</a> or <a href="https://instagram.com/2home.studio" target="_blank">Instagram DM</a> us!</p>
         </div>
       </div>
 
@@ -1083,13 +1175,20 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.5!2d145.1031!3d-37.8236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad63913f0b!2s1121+Riversdale+Rd%2C+Surrey+Hills+VIC+3127!5e0!3m2!1sen!2sau!4v1706000000000"
                 width="100%"
                 height="160"
-                style="border:0; filter: grayscale(100%) contrast(1.1) opacity(0.85);"
+                style="border:0;"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
               </iframe>
             </a>
             <p class="map-label">tap to open in Google Maps</p>
+            <!-- Google Review -->
+            <a href="https://maps.app.goo.gl/dSeq3nPxkS2VadQ87?g_st=ic" target="_blank" rel="noopener" class="google-review">
+              <span class="google-review-g">Google</span>
+              <span class="google-review-rating">5.0</span>
+              <span class="google-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="google-review-count">(23)</span>
+            </a>
           </div>
 
           <!-- Bottom Right: Hours -->
@@ -1102,6 +1201,7 @@
             </ul>
           </div>
         </div>
+
       </div>
 
       <!-- Footer -->
