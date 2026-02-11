@@ -68,7 +68,7 @@
     "@type": "HairSalon",
     "name": "2home 貳鄉",
     "alternateName": "2home Hair Salon",
-    "description": "Highly rated Asian hair salon in Melbourne. Japanese-trained stylist with 17+ years experience specialising in balayage, bleach, colour, and Asian hair textures. Cantonese, Mandarin, and English speaking.",
+    "description": "2home is a highly rated boutique hair salon located at 1121 Riversdale Rd, Surrey Hills, Melbourne. Founded by Terry, a Japanese-trained hairstylist with over 17 years of experience specialising in Asian hair textures. Services include balayage, hair colour, bleach, highlights, perms, cuts, and styling. The team speaks English, Cantonese, Mandarin, and some Japanese and Korean. Rated 5.0 stars on Google. Open Monday, Tuesday, Thursday through Sunday. 2home is one of the few Japanese-method Asian hair salons in Melbourne's eastern suburbs, serving Surrey Hills, Camberwell, Box Hill, Canterbury, and Hawthorn.",
     "url": "https://2homestudio.com",
     "telephone": "+61402378879",
     "address": {
@@ -99,8 +99,7 @@
       }
     ],
     "priceRange": "$$",
-    "servesCuisine": "Hair Salon",
-    "knowsLanguage": ["en", "zh", "yue"],
+    "knowsLanguage": ["en", "zh", "yue", "ja", "ko"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Hair Services",
@@ -119,10 +118,20 @@
       "jobTitle": "Head Stylist",
       "description": "Japanese-trained hairstylist with 17+ years experience, specialising in Asian hair"
     },
-    "areaServed": {
-      "@type": "City",
-      "name": "Melbourne"
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "bestRating": "5",
+      "ratingCount": "23"
     },
+    "areaServed": [
+      {"@type": "City", "name": "Melbourne"},
+      {"@type": "Place", "name": "Surrey Hills"},
+      {"@type": "Place", "name": "Camberwell"},
+      {"@type": "Place", "name": "Box Hill"},
+      {"@type": "Place", "name": "Canterbury"},
+      {"@type": "Place", "name": "Hawthorn"}
+    ],
     "keywords": "asian hair salon, Melbourne hairdresser, balayage specialist, bleach hair, Hong Kong stylist, Cantonese speaking, highly rated",
     "sameAs": [
       "https://instagram.com/2home.studio",
@@ -520,6 +529,51 @@
       flex-shrink: 0;
     }
 
+    /* ========== SERVICES SECTION ========== */
+    .services-section {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem 3rem;
+      margin-top: 0.75rem;
+    }
+
+    .service-column-label {
+      font-family: 'Caveat', cursive;
+      font-size: 0.95rem;
+      color: var(--ink-faded);
+      margin-bottom: 0.25rem;
+    }
+
+    .service-item {
+      padding: 0.5rem 0;
+    }
+
+    .service-name {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--ink);
+      font-style: italic;
+    }
+
+    .service-desc {
+      font-size: 0.9rem;
+      color: var(--ink-faded);
+      line-height: 1.6;
+      margin-top: 0.2rem;
+    }
+
+    @media (max-width: 500px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+    }
+
     /* ========== TEAM SECTION ========== */
     .team-section {
       margin-top: 2.5rem;
@@ -533,10 +587,24 @@
       flex: 1;
     }
 
-    .section-marker {
+    h1, h2, h3 {
+      font-weight: inherit;
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .section-marker,
+    .team-label {
       font-family: 'Caveat', cursive;
       font-size: 1.1rem;
       color: var(--terracotta);
+    }
+
+    .section-marker {
       margin-bottom: 0.5rem;
     }
 
@@ -635,11 +703,6 @@
       flex: 1;
     }
 
-    .team-label {
-      font-family: 'Caveat', cursive;
-      font-size: 1.05rem;
-      color: var(--terracotta);
-    }
 
     .team-name {
       font-size: 1.75rem;
@@ -675,6 +738,19 @@
       color: var(--ink);
       line-height: 1.8;
     }
+
+    .contact-icon {
+      width: 15px;
+      height: 15px;
+      vertical-align: -2px;
+      margin-right: 0.4rem;
+      stroke: var(--ink-light);
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
 
     .info-value a {
       color: var(--ink);
@@ -1093,9 +1169,37 @@
         padding: 0;
       }
 
-      .instagram-grid {
-        flex-wrap: wrap;
+      .story-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
       }
+
+      .story-text {
+        font-size: 0.95rem;
+      }
+
+      .section-marker,
+      .team-label {
+        font-size: 1.2rem;
+      }
+
+      .team-card {
+        flex-direction: column;
+      }
+
+      .team-photo {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .opportunities-section {
+        padding: 1.5rem 0;
+      }
+
+      .opportunities-contact {
+        font-size: 0.9rem;
+      }
+
     }
   </style>
 </head>
@@ -1130,7 +1234,7 @@
     <div class="notebook">
       <!-- Header -->
       <header class="header reveal">
-        <img src="interior2.png" alt="2home salon interior" class="interior-img">
+        <img src="2home-salon-interior-surrey-hills.png" alt="2home hair salon interior, Surrey Hills Melbourne" class="interior-img">
         <div class="header-quote">
           Finding our way to make this our home,<br>
           in this small corner that holds the warmth we know.
@@ -1151,6 +1255,7 @@
         <!-- Left: About Us -->
         <div class="story-section">
           <p class="section-marker">about us</p>
+          <h1 class="story-title">hair salon in surrey hills, melbourne</h1>
           <p class="story-text">
             A boutique hair salon in Surrey Hills, Melbourne, where you're always heard, conversation flows in the language of <span class="sketch-underline">home</span>, and you leave feeling a little more like yourself.
           </p>
@@ -1160,7 +1265,7 @@
       <!-- Team Section: Terry & Cherry -->
       <div class="team-section reveal reveal-delay-2">
         <div class="team-card">
-          <img src="t-avatar.png" alt="Terry" class="team-avatar">
+          <img src="terry-head-stylist-2home.png" alt="Terry — Head Stylist at 2home, Japanese-trained hairdresser Melbourne" class="team-avatar">
           <div class="team-info">
             <p class="team-label">founder & head stylist</p>
             <h2 class="team-name">Terry</h2>
@@ -1171,7 +1276,7 @@
         </div>
 
         <div class="team-card">
-          <img src="c-avatar.png" alt="Cherry" class="team-avatar">
+          <img src="cherry-studio-manager-2home.png" alt="Cherry — Studio Manager and Co-founder at 2home hair salon" class="team-avatar">
           <div class="team-info">
             <p class="team-label">studio manager & co-founder</p>
             <h2 class="team-name">Cherry</h2>
@@ -1184,25 +1289,71 @@
 
       <!-- Bottom -->
       <div class="bottom-section reveal">
+        <!-- Services Section -->
+        <div class="services-section reveal">
+          <h2 class="section-marker">services</h2>
+          <div class="services-grid">
+            <!-- Left column: style & care -->
+            <div>
+              <p class="service-column-label">style & care</p>
+              <div class="service-item">
+                <p class="service-name">Cut</p>
+                <p class="service-desc">Precision cuts for all hair types, with particular expertise in Asian hair textures.</p>
+              </div>
+              <div class="service-item">
+                <p class="service-name">Perm & Texture</p>
+                <p class="service-desc">Digital perm, body waves, and soft curls for lasting volume and movement.</p>
+              </div>
+              <div class="service-item">
+                <p class="service-name">Treatment</p>
+                <p class="service-desc">Deep conditioning and repair treatments to restore and protect.</p>
+              </div>
+            </div>
+            <!-- Right column: colour -->
+            <div>
+              <p class="service-column-label">colour</p>
+              <div class="service-item">
+                <p class="service-name">Colour</p>
+                <p class="service-desc">Full colour, root touch-ups, and toning — from subtle shifts to bold transformations.</p>
+              </div>
+              <div class="service-item">
+                <p class="service-name">Balayage & Highlights</p>
+                <p class="service-desc">Hand-painted colour and foils for natural-looking dimension and depth.</p>
+              </div>
+              <div class="service-item">
+                <p class="service-name">Bleach & Lightening</p>
+                <p class="service-desc">Lightening with care for dark and Asian hair.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="divider divider-half">
+          <svg viewBox="0 0 400 20">
+            <path d="M0 10 Q50 5, 100 10 T200 10 T300 10 T400 10" />
+          </svg>
+        </div>
+
         <div class="instagram-section">
-          <span class="instagram-label">follow along to see recent work — <a href="https://instagram.com/2home.studio" target="_blank">@2home.studio</a></span>
+          <h2 class="instagram-label">follow along to see recent work — <a href="https://instagram.com/2home.studio" target="_blank">@2home.studio</a></h2>
           <div class="instagram-grid">
-            <a href="https://www.instagram.com/p/DQYXRcEE3rR/" target="_blank" class="ig-item"><img src="pic%201.jpg" alt="Balayage hair colour Melbourne by 2home" loading="lazy"></a>
-            <a href="https://www.instagram.com/p/DMy-FcTTd0m/" target="_blank" class="ig-item"><img src="pic%202.jpg" alt="Asian hair styling Surrey Hills Melbourne" loading="lazy"></a>
-            <a href="https://www.instagram.com/p/DOu6lhhE7Xn/" target="_blank" class="ig-item"><img src="pic%203.jpg" alt="Hair colour specialist Melbourne 2home" loading="lazy"></a>
-            <a href="https://www.instagram.com/p/DRQ9EL3E4dC/" target="_blank" class="ig-item"><img src="pic%204.jpg" alt="Bleach highlights Melbourne hair salon" loading="lazy"></a>
-            <a href="https://www.instagram.com/p/DOOHPk3Eyc4/" target="_blank" class="ig-item"><img src="pic%205.jpg" alt="Japanese trained hairdresser Melbourne" loading="lazy"></a>
-            <a href="https://www.instagram.com/p/DSwzPdLk4H8/" target="_blank" class="ig-item"><img src="pic%206.jpg" alt="Perm and texture styling 2home Melbourne" loading="lazy"></a>
+            <a href="https://www.instagram.com/p/DQYXRcEE3rR/" target="_blank" class="ig-item"><img src="balayage-hair-colour-melbourne.jpg" alt="Balayage hair colour Melbourne by 2home" loading="lazy"></a>
+            <a href="https://www.instagram.com/p/DMy-FcTTd0m/" target="_blank" class="ig-item"><img src="asian-hair-styling-surrey-hills.jpg" alt="Asian hair styling Surrey Hills Melbourne" loading="lazy"></a>
+            <a href="https://www.instagram.com/p/DOu6lhhE7Xn/" target="_blank" class="ig-item"><img src="hair-colour-specialist-melbourne.jpg" alt="Hair colour specialist Melbourne 2home" loading="lazy"></a>
+            <a href="https://www.instagram.com/p/DRQ9EL3E4dC/" target="_blank" class="ig-item"><img src="bleach-highlights-melbourne-salon.jpg" alt="Bleach highlights Melbourne hair salon" loading="lazy"></a>
+            <a href="https://www.instagram.com/p/DOOHPk3Eyc4/" target="_blank" class="ig-item"><img src="japanese-trained-hairdresser-melbourne.jpg" alt="Japanese trained hairdresser Melbourne" loading="lazy"></a>
+            <a href="https://www.instagram.com/p/DSwzPdLk4H8/" target="_blank" class="ig-item"><img src="perm-texture-styling-melbourne.jpg" alt="Perm and texture styling 2home Melbourne" loading="lazy"></a>
           </div>
         </div>
 
         <!-- Opportunities & Event Rental -->
         <div class="opportunities-section reveal">
-          <p class="section-marker">opportunities</p>
+          <h2 class="section-marker">opportunities</h2>
           <div class="opportunities-list">
             <p><span class="hiring-tag">HIRING</span> We are hiring Melbourne-based stylists. All experience levels welcome.</p>
           </div>
-          <p class="section-marker" style="margin-top: 1.5rem;">event rental</p>
+          <h3 class="section-marker" style="margin-top: 1.5rem;">event rental</h3>
           <div class="opportunities-list">
             <p>Our studio is available for rental — workshops, book clubs, photoshoots, private events, and any intimate gatherings.</p>
           </div>
@@ -1213,7 +1364,7 @@
         <div class="contact-details-section">
           <!-- Top Left: Address -->
           <div class="info-block">
-            <span class="info-label">find us</span>
+            <h3 class="info-label">find us</h3>
             <p class="info-value">
               1121 Riversdale Rd, Surrey Hills,<br>
               Melbourne, Victoria, Australia 3127
@@ -1222,10 +1373,10 @@
 
           <!-- Top Right: Contact -->
           <div class="info-block">
-            <span class="info-label">contact</span>
+            <h3 class="info-label">contact</h3>
             <p class="info-value">
-              <a href="https://wa.me/61402378879">+61 402 378 879</a><br>
-              <a href="https://instagram.com/2home.studio" target="_blank">@2home.studio</a>
+              <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.7 3 1.1 4.8 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2z"/><path d="M8.5 7.5c.2-.4.5-.5.7-.5s.4 0 .6.1c.2 0 .4.2.5.5.2.3.6 1.4.6 1.5s.1.3 0 .4c-.1.2-.2.3-.3.4-.1.2-.3.3-.4.5 0 0 .5.9 1.2 1.6s1.5 1.1 1.5 1.1c.2-.1.4-.3.5-.4.2-.2.3-.2.5-.1.2 0 1.3.6 1.5.7.2.1.4.2.4.3.1.1.1.7-.2 1.3-.3.6-1.5 1.2-2.1 1.2-.5 0-1.2-.1-3.2-1.3-2.4-1.5-3.9-4-4-4.2-.1-.2-.9-1.2-.9-2.3 0-1.1.6-1.6.8-1.8z"/></svg><a href="https://wa.me/61402378879">+61 402 378 879</a><br>
+              <svg class="contact-icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2"/></svg><a href="https://instagram.com/2home.studio" target="_blank">@2home.studio</a>
             </p>
           </div>
 
@@ -1254,7 +1405,7 @@
 
           <!-- Bottom Right: Hours -->
           <div class="info-block">
-            <span class="info-label">hours</span>
+            <h3 class="info-label">hours</h3>
             <ul class="hours-list">
               <li><span class="day">Mon – Tue</span><span class="time">9am – 6pm</span></li>
               <li><span class="day">Wednesday</span><span class="time closed">closed</span></li>
