@@ -373,14 +373,19 @@
       position: relative;
       z-index: 2;
       opacity: 0;
-      transform: translateY(8px);
-      animation: fadeUp 0.6s ease 0.2s forwards;
+      animation: fadeIn 0.6s ease 0.2s forwards;
     }
 
     @keyframes fadeUp {
       to {
         opacity: 1;
         transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
       }
     }
 
@@ -933,7 +938,19 @@
     .opportunities-section {
       margin-top: 2.5rem;
       padding: 1.5rem 0;
-      border-top: 1px solid rgba(42, 38, 34, 0.1);
+      padding-top: 2rem;
+      position: relative;
+    }
+
+    .opportunities-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 2' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1 Q100 0, 200 1 T400 1' stroke='%232A2622' stroke-width='0.5' fill='none' opacity='0.2'/%3E%3C/svg%3E");
+      background-size: 400px 2px;
     }
 
     .opportunities-list {
@@ -949,6 +966,19 @@
       line-height: 1.8;
     }
 
+    .hiring-tag {
+      display: inline-block;
+      background: var(--terracotta);
+      color: var(--cream);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
     .opportunities-list a {
       color: var(--ink);
       text-decoration: none;
@@ -956,6 +986,24 @@
     }
 
     .opportunities-list a:hover {
+      border-color: var(--terracotta);
+      color: var(--terracotta);
+    }
+
+    .opportunities-contact {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      color: var(--ink-light);
+      line-height: 1.8;
+    }
+
+    .opportunities-contact a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink-faded);
+    }
+
+    .opportunities-contact a:hover {
       border-color: var(--terracotta);
       color: var(--terracotta);
     }
@@ -1125,15 +1173,6 @@
         </div>
       </div>
 
-      <!-- Opportunities -->
-      <div class="opportunities-section reveal">
-        <p class="section-marker">opportunities</p>
-        <div class="opportunities-list">
-          <p>We are hiring stylists.</p>
-          <p>Open for studio rental for workshops, book club meetings or any events. <a href="https://wa.me/61402378879">WhatsApp</a> or <a href="https://instagram.com/2home.studio" target="_blank">Instagram DM</a> us!</p>
-        </div>
-      </div>
-
       <!-- Bottom -->
       <div class="bottom-section reveal">
         <div class="instagram-section">
@@ -1146,6 +1185,19 @@
             <a href="https://www.instagram.com/p/DOOHPk3Eyc4/" target="_blank" class="ig-item"><img src="pic%205.jpg" alt="Japanese trained hairdresser Melbourne" loading="lazy"></a>
             <a href="https://www.instagram.com/p/DSwzPdLk4H8/" target="_blank" class="ig-item"><img src="pic%206.jpg" alt="Perm and texture styling 2home Melbourne" loading="lazy"></a>
           </div>
+        </div>
+
+        <!-- Opportunities & Event Rental -->
+        <div class="opportunities-section reveal">
+          <p class="section-marker">opportunities</p>
+          <div class="opportunities-list">
+            <p><span class="hiring-tag">HIRING</span> We are hiring Melbourne-based stylists. All experience levels welcome.</p>
+          </div>
+          <p class="section-marker" style="margin-top: 1.5rem;">event rental</p>
+          <div class="opportunities-list">
+            <p>Our studio is available for rental — workshops, book clubs, photoshoots, private events, and any intimate gatherings.</p>
+          </div>
+          <p class="opportunities-contact"><a href="https://wa.me/61402378879">WhatsApp</a> or send us an <a href="https://instagram.com/2home.studio" target="_blank">Instagram message</a> to get in touch.</p>
         </div>
 
         <!-- Contact Details - 2x2 Grid -->
