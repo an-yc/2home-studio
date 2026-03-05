@@ -8,11 +8,11 @@
   - Delete JS logic: `index.html:1472-1478`
 
 - [ ] **Update Google review count**
-  - Currently hardcoded as 5.0 / 24 reviews in two places:
+  - Currently hardcoded as 5.0 / 26 reviews in two places:
     - Visible badge: `index.html:1433-1437`
     - Structured data: `index.html:121-125`
   - Check current rating and count on Google, update both places
-  - Last updated: 2026-02-11
+  - Last updated: 2026-03-05
 
 ## Future — Set up Featurable (auto Google reviews)
 
